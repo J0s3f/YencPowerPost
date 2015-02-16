@@ -1,0 +1,31 @@
+Version 11F (2011-09-03)
+======================
+- Removed the sound support.
+- Modified posting logic to support up to 12 concurrent posting threads (thanks camelpost :) )
+
+Version 11E (2011-09-03)
+======================
+- Not Released.
+
+Version 11D (2010-05-26)
+======================
+- YencPowerPost now supports dynamic loading of MFC extension DLLs for providing localized
+languages.
+   
+
+Version 11C (2010-05-26)
+======================
+
+- Issue 001 : Added support for display of file queue size over 4 gigabytes
+   The old datatype used was an unsigned int which limited the display size of the queue to 
+   4194 MB.  Adding more than that would cause the counter to roll back over.  This means adding 
+   4195 MB would cause it to display as if only 1 MB was in the queue.  The new datatype is an 
+   unsigned int64 which will accomodate 18014398509481 MB.
+
+   An additional unit size of GB has been added to the queue size display as well.  After 51200 MB
+   the counter size will switch over to GB.
+
+   NOTE:  As a consequence of this change HISTORY.DAT files generated with previous versions will 
+   not display their contents properly.
+
+Prior versions:  See assert_readme.txt
