@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{88D8D5F2-0147-4973-948F-2939C6F11101}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Full</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>ASMENCODE;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\PostMost.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader />
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <CompileAsManaged>false</CompileAsManaged>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\PostMost.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\PostMost.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\PostMost.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Full</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>ASMENCODE;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\PostMost.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader />
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <CompileAsManaged>false</CompileAsManaged>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\PostMost.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\PostMost.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Debug/PostMostDbg.exe</OutputFile>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AddGroupDlg.cpp" />
+    <ClCompile Include="AutoRetryDlg.cpp" />
+    <ClCompile Include="BitmapLabel.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="DelayedPostingDlg.cpp" />
+    <ClCompile Include="DeleteHistoryConfirmDlg.cpp" />
+    <ClCompile Include="DeleteTaskDlg.cpp" />
+    <ClCompile Include="EncoderThread.cpp" />
+    <ClCompile Include="EncodingProgressDlg.cpp" />
+    <ClCompile Include="HistoryDlg.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="mt19937ar.cpp" />
+    <ClCompile Include="par2format.cpp" />
+    <ClCompile Include="PosterThread.cpp" />
+    <ClCompile Include="PostingProgressDlg.cpp" />
+    <ClCompile Include="PostMost.cpp" />
+    <ClCompile Include="PostMostDoc.cpp" />
+    <ClCompile Include="PostMostPropertySheet.cpp" />
+    <ClCompile Include="PostMostView.cpp" />
+    <ClCompile Include="ProgramSettings.cpp" />
+    <ClCompile Include="proppage_add_checksums.cpp" />
+    <ClCompile Include="PropPage_Add_FileOrder.cpp" />
+    <ClCompile Include="PropPage_Add_Groups.cpp" />
+    <ClCompile Include="PropPage_Add_Recovery.cpp" />
+    <ClCompile Include="PropPage_Add_Subject.cpp" />
+    <ClCompile Include="PropPage_Add_TextPrefix.cpp" />
+    <ClCompile Include="PropPage_Groups.cpp" />
+    <ClCompile Include="PropPage_Headers.cpp" />
+    <ClCompile Include="PropPage_ProgramSettings.cpp" />
+    <ClCompile Include="PropPage_Server.cpp" />
+    <ClCompile Include="SetMaxLinesDlg.cpp" />
+    <ClCompile Include="SplashWindow.cpp" />
+    <ClCompile Include="TaskObject.cpp" />
+    <ClCompile Include="TaskProp_FileAndParts.cpp" />
+    <ClCompile Include="TaskProp_Groups.cpp" />
+    <ClCompile Include="TaskProp_Log.cpp" />
+    <ClCompile Include="TaskProp_PrefixText.cpp" />
+    <ClCompile Include="ThreadMarshal.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PostMost.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddGroupDlg.h" />
+    <ClInclude Include="AutoRetryDlg.h" />
+    <ClInclude Include="BitmapLabel.h" />
+    <ClInclude Include="crc32table.h" />
+    <ClInclude Include="DelayedPostingDlg.h" />
+    <ClInclude Include="DeleteHistoryConfirmDlg.h" />
+    <ClInclude Include="DeleteTaskDlg.h" />
+    <ClInclude Include="EncoderThread.h" />
+    <ClInclude Include="EncodingProgressDlg.h" />
+    <ClInclude Include="HistoryDlg.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="par2format.h" />
+    <ClInclude Include="PosterThread.h" />
+    <ClInclude Include="PostingProgressDlg.h" />
+    <ClInclude Include="PostMost.h" />
+    <ClInclude Include="PostMostDoc.h" />
+    <ClInclude Include="PostMostPropertySheet.h" />
+    <ClInclude Include="PostMostView.h" />
+    <ClInclude Include="ProgramSettings.h" />
+    <ClInclude Include="proppage_add_checksums.h" />
+    <ClInclude Include="PropPage_Add_FileOrder.h" />
+    <ClInclude Include="PropPage_Add_Groups.h" />
+    <ClInclude Include="PropPage_Add_Recovery.h" />
+    <ClInclude Include="PropPage_Add_Subject.h" />
+    <ClInclude Include="PropPage_Add_TextPrefix.h" />
+    <ClInclude Include="PropPage_Groups.h" />
+    <ClInclude Include="PropPage_Headers.h" />
+    <ClInclude Include="PropPage_ProgramSettings.h" />
+    <ClInclude Include="PropPage_Server.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SetMaxLinesDlg.h" />
+    <ClInclude Include="SplashWindow.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TaskObject.h" />
+    <ClInclude Include="TaskProp_FileAndParts.h" />
+    <ClInclude Include="TaskProp_Groups.h" />
+    <ClInclude Include="TaskProp_Log.h" />
+    <ClInclude Include="TaskProp_PrefixText.h" />
+    <ClInclude Include="ThreadMarshal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Hist\Splash.bmp" />
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\ERROR.ICO" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\ico00002.ico" />
+    <Image Include="res\ico00003.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\logo.bmp" />
+    <Image Include="res\PostMost.ico" />
+    <Image Include="res\PostMostDoc.ico" />
+    <Image Include="res\QUESTION.ICO" />
+    <Image Include="res\stopwatch.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\PostMost.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="assert_readme.txt" />
+    <Text Include="original_source_readme.txt" />
+    <Text Include="yenc_source_readme.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

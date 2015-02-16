@@ -485,8 +485,10 @@ BOOL CM_WriteCStringArrayToFile(CFile& theFile, CStringArray& theCSA)
 
 	if(nSize > 0)
 	{
-		for(int k = 0; k < nSize; k++)
-			CM_WriteCStringToFile(theFile, theCSA.GetAt(k));
+		CString sta;
+		for (int k = 0; k < nSize; k++)
+			sta = theCSA.GetAt(k);
+			CM_WriteCStringToFile(theFile, sta);
 	}
 
 	return TRUE;
